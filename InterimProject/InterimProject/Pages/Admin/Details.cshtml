@@ -1,0 +1,45 @@
+﻿@page "{id:int}"
+@model InterimProject.Pages.Admin.DetailsModel
+@{
+}
+
+<h1>Details Page</h1>
+
+
+@if(Model.Message != null)
+{
+    <div class="row">
+        <div class="alert alert-success fade show" role="alert">
+            @Model.Message
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-2">Item Name :</div>
+    <div class="col-6">@Model.Menu.ItemName</div>
+</div>
+
+<div class="row">
+    <div class="col-2">Item Cost :</div>
+    <div class="col-6">@Model.Menu.ItemCost</div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-2">Item Discount :</div>
+    <div class="col-6">@Model.Menu.ItemDiscount</div>
+</div>
+
+<div class="row">
+    &nbsp;
+</div>
+
+<div class="row">
+    <div class="col-6 offset-2">
+        <a asp-page="/Admin/Menus"
+           class="btn btn-primary">Back To Menus</a>
+    </div>
+</div>

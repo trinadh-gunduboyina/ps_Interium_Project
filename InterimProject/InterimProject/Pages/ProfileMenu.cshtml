@@ -1,0 +1,77 @@
+﻿@page
+@model InterimProject.Pages.ProfileMenuModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+    
+            ViewData["about"] = "About";
+            ViewData["motto"] = "Our mission is to ensure nobody has a bad meal. JustOrder is your best option to search for and discover great places to eat.";
+            ViewData["service"] = "Services";
+            ViewData["approch"] = "Approch";
+            ViewData["sustainability"] = "Sustainability";
+            ViewData["news"] = "News";
+            ViewData["careers"] = "Careers";
+            ViewData["hyd"] = "Hyderabad";
+            ViewData["delhi"] = "Delhi";
+            ViewData["mumbai"] = "Mumbai";
+            ViewData["bangalore"] ="Bangalore";
+            ViewData["chennai"] ="Chennai";
+
+}
+
+
+    <p>&nbsp;</p>
+<div class="row">
+    <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+    <a><h2>View Menu Items</h2></a>
+</div>
+</div>
+
+
+<p>&nbsp;</p>
+
+<div class ="row">
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Item Cost</th>
+                    <th>Item Discount</th>
+                    <th>JustOrder</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var menu in Model.Menus)
+                {
+                    <tr>
+                        <td>@menu.ItemId</td>
+                        <td>@menu.ItemName</td>
+                        <td>@menu.ItemCost</td>
+                        <td>@menu.ItemDiscount</td>
+                        <td><a class="btn btn-sm btn-success" asp-page="/Error">Order Now!</a></td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+ @section MenuSection{
+      <ul class="navbar-nav mx-auto" data-nav-holder data-active-class-name="active">
+            <li class="nav-item active" data-nav-item>
+              <a class="nav-link" asp-page="index"><h3 class="text-white text-capitalize">Home</h3> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="about"><h3 class="text-white text-capitalize">About</h3></a></li>
+            <li class="colorlib-active" class="nav-item" data-nav-item><a class="nav-link" asp-page="ProfileMenu"><h3 class="text-white text-capitalize">Menu</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="gallery"><h3 class="text-white text-capitalize">Gallery</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="privacy"><h3 class="text-white text-capitalize">Privacy</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="blog"><h3 class="text-white text-capitalize">Blog</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="contact"><h3 class="text-white text-capitalize">Contact</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="login"><h3 class="text-white text-capitalize">Login</h3></a></li>
+          </ul>
+  }

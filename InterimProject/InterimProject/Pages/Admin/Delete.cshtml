@@ -1,0 +1,19 @@
+﻿@page "{id:int}"
+@model InterimProject.Pages.Admin.DeleteModel
+@{
+}
+
+
+
+<div class="row">
+    <div class="alert alert-dialog">
+        <h3>Are you sure to Delete @Model.Menu.ItemName ?</h3>
+    </div>
+</div>
+
+<div class="row">
+    <form name="f1" method="post">
+        <button type="submit" class="btn btn-danger">Yes!</button>
+        <a asp-page="/Admin/Menus" class="btn btn-info">No!</a>
+    </form>
+</div>

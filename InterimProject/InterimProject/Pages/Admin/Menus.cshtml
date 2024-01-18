@@ -1,0 +1,143 @@
+﻿@page
+@model InterimProject.Pages.Admin.MenusModel
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="col-md-6 mx-auto text-center mb-5 section-heading">
+<h2>Manage Menu Items</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+    <a asp-page="/Admin/Save" class="btn btn-lg btn-success"><h4>Add New Menu Item</h4></a>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class = "row">
+    <div class="col-5 mx-auto text-center md-5 section-heading">
+        <div class="btn btn-md btn-warning">
+        <h5>Currently @Model.Menus.Count() Items in Menu</h5>
+    </div>
+    </div>
+</div>
+
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+@*<div class="container">
+  <h1>Food Items</h1>
+  <p>Here we can view the list of food Items</p>
+  <div class="row">
+    
+    <form method="post"class="row g-3">
+        <div class="col col-lg-3">Select Food Category: </div>
+        <div class="col col-lg-3">&nbsp;</div>
+        <div class="col col-lg-3">
+            <select class="form-select" asp-for="Number">
+                @foreach (var category in @Model.Categories)
+                {
+                    <option value=@category.Id>@category.CategoryName</option> 
+                }
+            </select>
+        </div>
+
+        <div class="col col-lg-3">
+            <button type="submit" class="btn btn-primary mb-3">List</button> <a asp-page="/Admin/FoodItems/Add" class="btn btn-primary mb-3">Add Food Item</a>
+        </div>
+    </form>
+
+   </div>
+</div>*@
+
+
+<div class="container">
+  <h1>Food Items</h1>
+  <p>Here we can view the list of food Items</p>
+  <div class="row">
+    
+    <form method="post"class="row g-3">
+        <div class="col col-lg-3">Select Food Category: </div>
+        <div class="col col-lg-3">&nbsp;</div>
+            
+                
+        <div class="col col-lg-3">
+            <select class="form-select" asp-for="Number">
+                @foreach (var category in @Model.Categories)
+                {
+                    <option value=@category.Id>@category.CategoryName</option> 
+                }
+            </select>
+        </div>
+
+        <div class="col col-lg-3">
+            <button type="submit" class="btn btn-primary mb-3">List</button> <a asp-page="/Admin/FoodItems/Add" class="btn btn-primary mb-3">Add Food Item</a>
+        </div>
+    </form>
+
+   </div>
+</div>
+
+
+
+<p>&nbsp;</p>
+
+
+<div class ="row">
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Category Name</th>
+                    <th>Item Cost</th>
+                    <th>Item Discount</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var menu in Model.Menus)
+                {
+                    <tr>
+                        <td>@menu.ItemId</td>
+                        <td>@menu.ItemName</td>
+                        <td>@menu.Category.CategoryName</td>
+                        <td>@menu.ItemCost</td>
+                        <td>@menu.ItemDiscount</td>
+                       
+                        <td>
+                            <a asp-page="/Admin/Details"
+                            asp-route-ID="@menu.ItemId"
+                            class="btn btn-info">Details</a>
+                        </td>
+
+                        <td>
+                            <a asp-page="/Admin/Save"
+                            asp-route-ID="@menu.ItemId"
+                            class="btn btn-warning">Edit</a>
+                        </td>
+
+                        <td>
+                            <a asp-page="/Admin/Delete"
+                            asp-route-ID="@menu.ItemId"
+                            class="btn btn-danger">Delete</a>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

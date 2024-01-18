@@ -1,0 +1,41 @@
+﻿@page
+@model InterimProject.Pages.Account.LoginModel
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="container">
+	<h3 class="sub-heading">&nbsp;</h3>
+    <h3 class="sub-heading">&nbsp;</h3>
+    <h3 class="sub-heading">&nbsp;</h3>
+
+    <h1 class="heading">Admin Login</h1>
+
+    <section class="login">
+    
+      <form method="post" asp-page="/Account/Login">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="inputBox">
+            <label asp-for="SiteAdmin.UserName" class="col-2 col-form-label"></label>
+            <div class="input">
+                <input asp-for="SiteAdmin.UserName" class="form-control"
+                       placeholder="Enter Username" />
+                <span asp-validation-for="SiteAdmin.UserName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <label asp-for="SiteAdmin.Password" class="col-2 col-form-label"></label>
+            <div class="input">
+                <input asp-for="SiteAdmin.Password" class="form-control"
+                       placeholder="Enter Password" />
+                <span asp-validation-for="SiteAdmin.Password" class="text-danger"></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </section>
+
+</div>

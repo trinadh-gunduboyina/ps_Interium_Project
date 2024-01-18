@@ -1,0 +1,51 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+    
+            ViewData["about"] = "About";
+            ViewData["motto"] = "Our mission is to ensure nobody has a bad meal. JustOrder is your best option to search for and discover great places to eat.";
+            ViewData["service"] = "Services";
+            ViewData["approch"] = "Approch";
+            ViewData["sustainability"] = "Sustainability";
+            ViewData["news"] = "News";
+            ViewData["careers"] = "Careers";
+            ViewData["hyd"] = "Hyderabad";
+            ViewData["delhi"] = "Delhi";
+            ViewData["mumbai"] = "Mumbai";
+            ViewData["bangalore"] ="Bangalore";
+            ViewData["chennai"] ="Chennai";
+
+}
+
+
+<div class="text-center">
+    <p >&ensp;</p>
+     <p >&ensp;</p>
+     
+    
+<h1>@ViewData["Title"]</h1>
+
+<h3>Please go through Our Privacy Terms & Conditions </h3>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+</div>
+
+
+ @section MenuSection{
+      <ul class="navbar-nav mx-auto" data-nav-holder data-active-class-name="active">
+            <li class="nav-item active" data-nav-item>
+              <a class="nav-link" asp-page="index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="about">About</a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="service">Services</a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="gallery">Gallery</a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="privacy">Privacy</a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="blog">Blog</a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="contact">Contact</a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="login">Login</a></li>
+          </ul>
+  }
+
+   

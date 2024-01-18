@@ -1,0 +1,158 @@
+﻿@page
+@model IndexModel
+@{
+   
+     ViewData["Title"] = "JustOrder - Website";
+            ViewData["about"] = "About";
+            ViewData["motto"] = "Our mission is to ensure nobody has a bad meal. JustOrder is your best option to search for and discover great places to eat.";
+            ViewData["service"] = "Services";
+            ViewData["approch"] = "Approch";
+            ViewData["sustainability"] = "Sustainability";
+            ViewData["news"] = "News";
+            ViewData["careers"] = "Careers";
+            ViewData["hyd"] = "Hyderabad";
+            ViewData["delhi"] = "Delhi";
+            ViewData["mumbai"] = "Mumbai";
+            ViewData["bangalore"] ="Bangalore";
+            ViewData["chennai"] ="Chennai";
+}
+
+
+  <section>
+    <div class="slide-one-item home-slider owl-carousel">
+
+      <div class="site-blocks-cover overlay" style="background-image: url(@Model.data.HomeImageUrl1);" data-aos="fade"
+        data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+
+              <h1 class="mb-2"></h1>
+              <h2 class="caption"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-blocks-cover overlay" style="background-image: url(@Model.data.HomeImageUrl2);" data-aos="fade"
+        data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <h1 class="mb-2">@Model.data.Homedata2</h1>
+              <h2 class="caption">@Model.data.Homedata21</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-blocks-cover overlay" style="background-image: url(@Model.data.HomeImageUrl3);" data-aos="fade"
+        data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <h1 class="mb-2">@Model.data.Homedata3</h1>
+              <h2 class="caption">@Model.data.Homedata31</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <section>
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+            <h2 class="mb-5">@Model.data.FoodSectionTitle</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div class="hotel-room text-center">
+              <a href="ProfileMenu" class="d-block mb-0 thumbnail"><img src="@Model.data.FoodImageUrl1" alt="Image" class="img-fluid"></a>
+              <div class="hotel-room-body">
+                <h3 class="heading mb-0"><a href="/ProfileMenu">@Model.data.food1</a></h3>
+                <strong class="price">@Model.data.price1</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div class="hotel-room text-center">
+              <a href="ProfileMenu" class="d-block mb-0 thumbnail"><img src="@Model.data.FoodImageUrl2" alt="Image" class="img-fluid"></a>
+              <div class="hotel-room-body">
+                <h3 class="heading mb-0"><a href="/ProfileMenu">@Model.data.food2</a></h3>
+                <strong class="price">@Model.data.price2</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div class="hotel-room text-center">
+              <a href="ProfileMenu" class="d-block mb-0 thumbnail"><img src="@Model.data.FoodImageUrl3" alt="Image" class="img-fluid"></a>
+              <div class="hotel-room-body">
+                <h3 class="heading mb-0"><a href="/ProfileMenu">@Model.data.food3</a></h3>
+                <strong class="price">@Model.data.price3</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div class="hotel-room text-center">
+              <a href="ProfileMenu" class="d-block mb-0 thumbnail"><img src="@Model.data.FoodImageUrl4" alt="Image" class="img-fluid"></a>
+              <div class="hotel-room-body">
+                <h3 class="heading mb-0"><a href="ProfileMenu">@Model.data.food4</a></h3>
+                <strong class="price">@Model.data.price4</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div class="hotel-room text-center">
+              <a href="ProfileMenu" class="d-block mb-0 thumbnail"><img src="@Model.data.FoodImageUrl5" alt="Image" class="img-fluid"></a>
+              <div class="hotel-room-body">
+                <h3 class="heading mb-0"><a href="ProfileMenu">@Model.data.food5</a></h3>
+                <strong class="price">@Model.data.price5</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <div class="hotel-room text-center">
+              <a href="ProfileMenu" class="d-block mb-0 thumbnail"><img src="@Model.data.FoodImageUrl6" alt="Image" class="img-fluid"></a>
+              <div class="hotel-room-body">
+                <h3 class="heading mb-0"><a href="ProfileMenu">@Model.data.food6</a></h3>
+                <strong class="price">@Model.data.price6</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  @section MenuSection{
+      <ul class="navbar-nav mx-auto" data-nav-holder data-active-class-name="active">
+            <li class="nav-item active" data-nav-item>
+              <a class="nav-link" asp-page="index"><h3 class="text-white text-capitalize">Home</h3> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="about"><h3 class="text-white text-capitalize">About</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="ProfileMenu"><h3 class="text-white text-capitalize">Menu</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="gallery"><h3 class="text-white text-capitalize">Gallery</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="privacy"><h3 class="text-white text-capitalize">Privacy</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="blog"><h3 class="text-white text-capitalize">Blog</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="contact"><h3 class="text-white text-capitalize">Contact</h3></a></li>
+            <li class="nav-item" data-nav-item><a class="nav-link" asp-page="login"><h3 class="text-white text-capitalize">Login</h3></a></li>
+             <li class="nav-item" data-nav-item><a class="nav-link" asp-page="cart"><h3 class="text-white text-capitalize">Cart</h3></a></li>
+          </ul>
+  }
+
+  

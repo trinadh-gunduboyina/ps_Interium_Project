@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <title>@ViewData["Title"]</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="template/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="template/css/bootstrap.min.css">
+  <link rel="stylesheet" href="template/css/jquery-ui.css">
+  <link rel="stylesheet" href="template/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="template/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="template/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="template/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="template/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="template/css/aos.css">
+  <link rel="stylesheet" href="template/css/style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="template/css/magnific-popup.css">
+  <link rel="stylesheet" href="template/css/jquery-ui.css">
+  <link rel="stylesheet" href="template/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="template/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="template/css/animate.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+
+
+</head>
+<body>
+    
+
+
+
+    <!-- Header Start -->
+
+  <header data-nav-container>
+
+    <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">
+          <h2 class="text-white text-capitalize"></i><span class="text-color">JustOrder</span></h2>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
+          aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="ti-view-list"></span>
+        </button>
+
+        <div class="collapse text-center navbar-collapse" id="navbarsid">
+          
+            @await RenderSectionAsync("MenuSection", required:true)
+
+
+
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- Header Close -->
+
+
+
+
+
+
+
+
+  <div id="colorlib-main">
+      <section class="ftco-section-no-padding bg-light">
+          @RenderBody()
+      </section>
+  </div>
+
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="container">
+
+
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="footer-heading mb-4 text-white">@ViewData["about"]</h3>
+          <p>@ViewData["motto"]</p>
+          <p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">@ViewData["about"]</a></li>
+                <li><a href="#">@ViewData["services"]</a></li>
+                <li><a href="#">@ViewData["approach"]</a></li>
+                <li><a href="#">@ViewData["sustainability"]</a></li>
+                <li><a href="#">@ViewData["news"]</a></li>
+                <li><a href="#">@ViewData["careers"]</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h3 class="footer-heading mb-4 text-white">Our Locations</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">@ViewData["hyd"]</a></li>
+                <li><a href="#">@ViewData["delhi"]</a></li>
+                <li><a href="#">@ViewData["mumbai"]</a></li>
+                <li><a href="#">@ViewData["bangalore"]</a></li>
+                <li><a href="#">@ViewData["chennai"]</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-2">
+          <div class="col-md-12">
+            <h3 class="footer-heading mb-4 text-white">Social Icons</h3>
+          </div>
+          <div class="col-md-12">
+            <p>
+              <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+              <a href="#" class="p-2"><span class="icon-twitter"></span></a>
+              <a href="#" class="p-2"><span class="icon-instagram"></span></a>
+              <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
+
+            </p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-6 col-md-6">
+                <div class="copyright-text">
+                    <p style="color: #777777;">Copyright 2021. All Rights Reserved by
+                        <a href="http://www.medikoe.com" target="_blank" style="color: #777777;">JustOrder</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-6 col-md-6">
+                <span style="float: right;padding-left: 10px;">
+                    <a href="http://www.medikoe.com" target="_blank">
+                        <img src="images/Justorder.png" alt="JustOrder" width="150">
+                    </a>
+                </span>
+                <span style="float: right;">
+                    <h3 style="color:#777777">Created with <i class="fa fa-heart"
+                            style="color: #f16821;font-size: 20px;"></i> by </h3>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="template/js/jquery-3.3.1.min.js"></script>
+  <script src="template/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="template/js/jquery-ui.js"></script>
+  <script src="template/js/popper.min.js"></script>
+  <script src="template/js/bootstrap.min.js"></script>
+  <script src="template/js/owl.carousel.min.js"></script>
+  <script src="template/js/jquery.stellar.min.js"></script>
+  <script src="template/js/jquery.countdown.min.js"></script>
+  <script src="template/js/jquery.magnific-popup.min.js"></script>
+  <script src="template/js/bootstrap-datepicker.min.js"></script>
+  <script src="template/js/aos.js"></script>
+
+
+  <script src="template/js/mediaelement-and-player.min.js"></script>
+
+  <script src="template/js/main.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+      for (var i = 0; i < total; i++) {
+        new MediaElementPlayer(mediaElements[i], {
+          pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+          shimScriptAccess: 'always',
+          success: function () {
+            var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+            for (var j = 0; j < targetTotal; j++) {
+              target[j].style.visibility = 'visible';
+            }
+          }
+        });
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
